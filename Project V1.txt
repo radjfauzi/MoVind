@@ -1,0 +1,9 @@
+Nama Project: MoVind
+Progres minggu belum ke eksekusi projectnya karena beberapa hambatan
+minggu ini kita baru mendiskusikan terkait frontend dan erd databasenya
+
+https://github.com/radjfauzi/MoVind
+role
+Frontend	Fahmi Auliya 140810170041
+Backend 	Yosua Prima Gultom 140810170038
+Database 	Muhammad Siradj Al Fauzi 140810170021
