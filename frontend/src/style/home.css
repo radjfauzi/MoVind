@@ -1,13 +1,6 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
 .bg-darkc{
-  background-color: #001427;
+  background: rgb(73,77,82);
+background: linear-gradient(180deg, rgba(73,77,82,1) 0%, rgba(53,58,64,1) 50%, rgba(53,58,64,1) 100%);
 }
 
 body{
@@ -35,7 +28,7 @@ body{
   height: 3em;
 }
 
-.submitcolor{
-  background-color: #B8BDB5 !important;
-  color: #235789 !important;
+.star-icon-size{
+  width: 10px;
+  height: 10px;
 }
