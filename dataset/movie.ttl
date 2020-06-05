@@ -1,0 +1,221 @@
+@prefix mc: <https://movie.com/list/moviecatalog#> .
+@prefix id: <http://movie.com/list/data#> .
+
+
+id:M001     
+	mc:title    		  "Avengers: Age Of Ultron" ;
+  mc:director       "Joss Whedon";
+  mc:genre          "Action, Sci-fi";
+  mc:releasedate    2015
+  mc:language       "English";
+  mc:rating         7;
+  mc:poster         "poster/age_of_ultron.jpg";
+  mc:streaming      "Google Play";
+  mc:imdb           "https://www.imdb.com/title/tt2395427/".
+
+id:M002     
+	mc:title    		  "Central Intelligence";
+  mc:director       "Rawson Marshall Thurber";
+  mc:genre          "Action, Comedy";
+  mc:releasedate    2016;
+  mc:language       "English";
+  mc:rating         6;
+  mc:poster         "poster/central_intelligence.jpg";
+  mc:imdb           "https://www.imdb.com/title/tt1489889/". 
+	
+	
+id:M003
+	mc:title    		  "All the Bright Places";
+  mc:director       "Brett Haley";
+  mc:genre          "Drama, Romance";
+  mc:releasedate    2020;
+  mc:language       "English";
+  mc:rating         6;
+  mc:poster         "poster/atbp.jpg";
+  mc:streaming      "Netflix";
+  mc:imdb           "https://www.imdb.com/title/tt3907584/". 
+	
+id:M004
+	mc:title    		  "Satan's Slave";
+  mc:director       "Joko Anwar";
+  mc:genre          "Horror, Drama";
+  mc:releasedate    2017;
+  mc:language       "Indonesian";
+  mc:rating         6;
+  mc:poster         "poster/satan_slave.jpg";
+  mc:streaming      "Netflix";
+  mc:imdb           "https://www.imdb.com/title/tt7076834/". 
+	
+id:M005
+	mc:title    		  "Avengers: Endgame";
+  mc:director       "Anthony Russo, Joe Russo";
+  mc:genre          "Action, Drama";
+  mc:releasedate    2019;
+  mc:language       "English";
+  mc:rating         8;
+  mc:poster         "poster/endgame.jpg";
+  mc:streaming      "Google Play";
+  mc:imdb           "https://www.imdb.com/title/tt4154796/". 
+	
+id:M006
+	mc:title    		  "Marlina the Murderer in Four Acts";
+  mc:director       "Mouly Surya";
+  mc:genre          "Drama";
+  mc:releasedate    2017;
+  mc:language       "Indonesian";
+  mc:rating         7;
+  mc:poster         "poster/marlina.jpg";
+  mc:imdb           "https://www.imdb.com/title/tt5923026/". 
+	
+id:M007
+	mc:title    		  "The Night Comes for Us";
+  mc:director       "Timo Tjahjanto";
+  mc:genre          "Action, Drama";
+  mc:releasedate    2018;
+  mc:language       "Indonesian";
+  mc:rating         7;
+  mc:poster         "poster/tncfu.jpg";
+  mc:streaming      "Netflix";
+  mc:imdb           "https://www.imdb.com/title/tt6116856/". 
+	
+id:M008
+	mc:title    		  "Midnight Sun";
+  mc:director       "Scott Speer";
+  mc:genre          "Drama, Romance";
+  mc:releasedate    2018;
+  mc:language       "English";
+  mc:rating         6;
+  mc:poster         "poster/midnight_sun.jpg";
+  mc:imdb           "https://www.imdb.com/title/tt4799066/".
+
+id:M009
+  mc:title    		  "One Day We'll Talk About Today";
+  mc:director       "Angga Dwimas";
+  mc:genre          "Drama";
+  mc:releasedate    2020;
+  mc:language       "Indonesian";
+  mc:rating         7;
+  mc:poster         "poster/nkcthi.jpg";
+  mc:streaming      "Netflix";
+  mc:imdb           "https://www.imdb.com/title/tt10773114/". 
+
+id:M010
+  mc:title    		  "Bloodshot";
+  mc:director       "Dave Wilson";
+  mc:genre          "Action, Sci-fi";
+  mc:releasedate    2020;
+  mc:language       "English";
+  mc:rating         5;
+  mc:poster         "poster/bloodshot.jpg";
+  mc:streaming      "Google Play";
+  mc:imdb           "https://www.imdb.com/title/tt1634106/". 
+
+id:M011
+  mc:title    		  "1917";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M012
+  mc:title    		  "Midsommar";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M013
+  mc:title    		  "A Star is Born";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M014
+  mc:title    		  "Get Out";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M015
+  mc:title    		  "Dunkirk";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M016
+  mc:title    		  "Three Billboards Outside Ebbing, Missouri";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M017
+  mc:title    		  "";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M018
+  mc:title    		  "";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M019
+  mc:title    		  "";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
+
+id:M020
+  mc:title    		  "";
+  mc:director       "";
+  mc:genre          "";
+  mc:releasedate    ;
+  mc:language       "";
+  mc:rating         ;
+  mc:poster         "";
+  mc:streaming      "";
+  mc:imdb           "". 
