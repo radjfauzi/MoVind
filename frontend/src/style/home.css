@@ -1,0 +1,41 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.bg-darkc{
+  background-color: #001427;
+}
+
+body{
+  background-color: #353a40;
+}
+
+.bg-lightc{
+  background-color: #235789;
+}
+
+.txt-lightc{
+  color: #fdfffc !important;
+}
+
+.txt-lightc2{
+  color: #B4CDED !important;
+}
+
+.txt-lightc3{
+  color: #B8BDB5 !important;
+}
+
+.search-icon-size{
+  width: 3em;
+  height: 3em;
+}
+
+.submitcolor{
+  background-color: #B8BDB5 !important;
+  color: #235789 !important;
+}
