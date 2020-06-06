@@ -15,7 +15,7 @@ id:M001
 
 id:M002    
 	mc:title			  "Central Intelligence";
-	mc:director		  "Rawson Marshall Thurber";
+	mc:director		  "Rawson Marshall Thurber";c
 	mc:genre			  "Action, Comedy";
 	mc:releasedate	2016;
 	mc:language			"English";
@@ -175,15 +175,15 @@ id:M016
   mc:imdb           "https://www.imdb.com/title/tt5027774/". 
 
 id:M017
-  mc:title    		"The Dark Knight";
+  mc:title    		"The Dark Knight Rises";
   mc:director       "Christopher Nolan";
-  mc:genre          "Action, Crime, Drama";
-  mc:releasedate    2008;
+  mc:genre          "Action, Adventure";
+  mc:releasedate    2012;
   mc:language       "English";
-  mc:rating         9;
-  mc:poster         "poster/dark_knight";
+  mc:rating         8;
+  mc:poster         "poster/dark_knight_rises";
   mc:streaming      "Google Play";
-  mc:imdb           "https://www.imdb.com/title/tt0468569/". 
+  mc:imdb           "https://www.imdb.com/title/tt1345836/". 
 
 id:M018
   mc:title    		"The Avengers";
@@ -274,15 +274,14 @@ id:M020
   mc:imdb           "https://www.imdb.com/title/tt0816692/". 
 
  id:M026
-  mc:title    		"The Prestige";
-  mc:director       "Christopher Nolan";
-  mc:genre          "Drama, Mystery, Sci-Fi";
-  mc:releasedate    2006;
+  mc:title    		"The Expendables";
+  mc:director       "Sylvester Stallone";
+  mc:genre          "Action, Adventure, Thriller";
+  mc:releasedate    2010;
   mc:language       "English";
-  mc:rating         8;
-  mc:poster         "poster/the_prestige";
-  mc:streaming      "Google Play, Netflix";
-  mc:imdb           "https://www.imdb.com/title/tt0482571/". 
+  mc:rating         6;
+  mc:poster         "poster/expendables";
+  mc:imdb           "https://www.imdb.com/title/tt1320253/". 
 
  id:M027
   mc:title    		"Fury";
