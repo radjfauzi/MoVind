@@ -10,6 +10,21 @@ function App() {
 
   });
 
+  const getData = async () => {
+    const BASE_URL ="http://localhost:3030/movind/query";
+
+    const headers = {
+      'Accept': 'application/sparql-results+json,*/*;q=0.9',
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+    };
+
+    const queryData = {
+      query:
+      'PREFIX'
+    };
+
+  }; 
+
   return (
     <div className="bg-dark txt-lightc">
       <nav className="navbar navbar-dark bg-dark shadow mb-5">
