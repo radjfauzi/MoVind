@@ -1,0 +1,34 @@
+@prefix mc: <https://movie.com/list/moviecatalog#> .
+@prefix sc: <https://movie.com/list/seriescatalog#> .
+@prefix id: <http://movie.com/list/data#> .
+
+
+id:M001     
+	mc:title    		"Avengers : AgeOfUltron" ;
+    mc:category      	"Action" ;
+    mc:releasedate     	"2017" ;
+	mc:director      	"Joss Whedon" ;
+	mc:director      	"Anthony Russo" ;
+    mc:director       	"Joe Russo" . 
+
+id:M002     
+	mc:title    		"Spiderman : Homecoming" ;
+    mc:category     	"Action" ;
+    mc:releasedate      "2017" ;
+	mc:director       	"Jonn Wats" . 
+	
+	
+id:M003
+	mc:title    		"2012" ;
+    mc:category    	  	"thriller" ;
+    mc:releasedate      "2012" ;
+    mc:director       	"Roland Emmerich" . 
+	
+	
+id:S001
+	sc:title    		"GameOfThrone" ;
+    sc:category    	  	"Action , romance" ;
+    sc:releasedate      "2019" ;
+	sc:director			"D.B Weiss";
+    sc:director       	"David Benioff" .
+
