@@ -219,4 +219,224 @@ id:M020
   mc:rating         8;
   mc:poster         "poster/end_game";
   mc:streaming      "";
-  mc:imdb           "https://www.imdb.com/title/tt4154796/". 
+  mc:imdb           "https://www.imdb.com/title/tt4154796/".
+
+ id:M021
+  mc:title    		"Uncut Gems";
+  mc:director       "Benny Safdie, Josh Safdie";
+  mc:genre          "Crime, Drama, Thriller";
+  mc:releasedate    2019;
+  mc:language       "English";
+  mc:rating         7;
+  mc:poster         "poster/uncut_gems";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt5727208/".  
+
+ id:M022
+  mc:title    		"Inception";
+  mc:director       "Christopher Nolan";
+  mc:genre          "Action, Adventure, Sci-Fi";
+  mc:releasedate    2019;
+  mc:language       "English";
+  mc:rating         8;
+  mc:poster         "poster/inception";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt1375666/". 
+
+ id:M023
+  mc:title    		"Joker";
+  mc:director       "Bong Joon Ho";
+  mc:genre          "Crime, Drama, Thriller";
+  mc:releasedate    2019;
+  mc:language       "English";
+  mc:rating         8;
+  mc:poster         "poster/joker";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt7286456/". 
+
+ id:M024
+  mc:title    		"Forrest Gump";
+  mc:director       "Robert Zemeckis";
+  mc:genre          "Drama, Romance";
+  mc:releasedate    1994;
+  mc:language       "English";
+  mc:rating         8;
+  mc:poster         "poster/forrest_gump";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt0109830/". 
+
+ id:M025
+  mc:title    		"Interstellar";
+  mc:director       "Christopher Nolan";
+  mc:genre          "Adventure, Drama, Sci-Fi";
+  mc:releasedate    2014;
+  mc:language       "English";
+  mc:rating         8;
+  mc:poster         "poster/interstellar";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt0816692/". 
+
+ id:M026
+  mc:title    		"The Prestige";
+  mc:director       "Christopher Nolan";
+  mc:genre          "Drama, Mystery, Sci-Fi";
+  mc:releasedate    2006;
+  mc:language       "English";
+  mc:rating         8;
+  mc:poster         "poster/the_prestige";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt0482571/". 
+
+ id:M027
+  mc:title    		"WALL·E";
+  mc:director       "Andrew Stanton";
+  mc:genre          "Animation, Adventure, Family";
+  mc:releasedate    2008;
+  mc:language       "English";
+  mc:rating         8;
+  mc:poster         "poster/wall_e";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt0910970/".
+
+ id:M028
+  mc:title    		"Spider-Man: Into the Spider-Verse";
+  mc:director       "Bob Persichetti, Peter Ramsey";
+  mc:genre          "Animation, Action, Adventure";
+  mc:releasedate    2018;
+  mc:language       "English";
+  mc:rating         8;
+  mc:poster         "poster/spider_verse";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt4633694/". 
+
+ id:M029
+  mc:title    		"The Raid: Redemption";
+  mc:director       "Gareth Evans";
+  mc:genre          "Action, Thriller";
+  mc:releasedate    2011;
+  mc:language       "Indonesian";
+  mc:rating         7;
+  mc:poster         "poster/the_raid";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt1899353/". 
+
+ id:M030
+  mc:title    		"Merantau";
+  mc:director       "Gareth Evans";
+  mc:genre          "Action, Drama ";
+  mc:releasedate    2009;
+  mc:language       "Indonesian";
+  mc:rating         6;
+  mc:poster         "poster/merantau";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt1368116/". 
+
+ id:M031
+  mc:title    		"The Raid 2: Berandal";
+  mc:director       "Gareth Evans";
+  mc:genre          "Action, Crime, Thriller";
+  mc:releasedate    2014;
+  mc:language       "Indonesian";
+  mc:rating         8;
+  mc:poster         "poster/the_raid2";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt2265171/". 
+
+ id:M032
+  mc:title    		"Keluarga Cemara";
+  mc:director       "Yandy Laurens";
+  mc:genre          "Drama, Family";
+  mc:releasedate    2018;
+  mc:language       "Indonesian";
+  mc:rating         7;
+  mc:poster         "poster/keluarga_cemara";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt7885874/". 
+
+ id:M033
+  mc:title    		"Marmut Merah Jambu";
+  mc:director       "Raditya Dika";
+  mc:genre          "Comedy, Romance";
+  mc:releasedate    2014;
+  mc:language       "Indonesian";
+  mc:rating         6;
+  mc:poster         "poster/mmj";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt5658714/". 
+
+ id:M034
+  mc:title    		"Kambing Jantan";
+  mc:director       "Rudy Soedjarwo";
+  mc:genre          "Comedy, Drama, Romance";
+  mc:releasedate    2009;
+  mc:language       "Indonesian";
+  mc:rating         5;
+  mc:poster         "poster/kambing_jantan";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt1385919/".
+
+ id:M035
+  mc:title    		"Cinta Brontosaurus";
+  mc:director       "Fajar Nugros";
+  mc:genre          "Comedy, Drama, Romance";
+  mc:releasedate    2013;
+  mc:language       "Indonesian";
+  mc:rating         6;
+  mc:poster         "poster/cinta_brontosaurus";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt3032040/".
+
+ id:M036
+  mc:title    		"Manusia Setengah Salmon";
+  mc:director       "Herdanius Larobu";
+  mc:genre          "Comedy, Romance";
+  mc:releasedate    2013;
+  mc:language       "Indonesian";
+  mc:rating         6;
+  mc:poster         "poster/manusia_setsalmon";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt6330072/".
+
+ id:M037
+  mc:title    		"A Quiet Place";
+  mc:director       "John Krasinski";
+  mc:genre          "Drama, Horror, Sci-Fi";
+  mc:releasedate    2018;
+  mc:language       "English";
+  mc:rating         7;
+  mc:poster         "poster/quiet_place";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt6644200/".
+
+ id:M038
+  mc:title    		"Cek Toko Sebelah";
+  mc:director       "Ernest Prakasa";
+  mc:genre          "Comedy, Drama, Family";
+  mc:releasedate    2016;
+  mc:language       "Indonesian";
+  mc:rating         8;
+  mc:poster         "poster/cek_toko_sebelah";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt6366854/". 
+
+ id:M039
+  mc:title    		"My Stupid Boss";
+  mc:director       "Upi Avianto";
+  mc:genre          "Comedy";
+  mc:releasedate    2016;
+  mc:language       "Indonesian";
+  mc:rating         7;
+  mc:poster         "poster/stupid_boxx";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt5514296/". 
+
+ id:M040
+  mc:title    		"What's Up with Love?";
+  mc:director       "Rudy Soedjarwo";
+  mc:genre          "Drama, Romance";
+  mc:releasedate    2002;
+  mc:language       "Indonesia";
+  mc:rating         7;
+  mc:poster         "poster/aadc";
+  mc:streaming      "";
+  mc:imdb           "https://www.imdb.com/title/tt0307920/".     
