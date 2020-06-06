@@ -3,50 +3,50 @@
 
 
 id:M001     
-	mc:title			"Avengers: Age Of Ultron" ;
+	mc:title	  		"Avengers: Age Of Ultron" ;
 	mc:director			"Joss Whedon";
-	mc:genre			"Action, Sci-fi";
-	mc:releasedate		2015
+	mc:genre		  	"Action, Sci-fi";
+	mc:releasedate	2015;
 	mc:language			"English";
-	mc:rating			7;
-	mc:poster			"poster/age_of_ultron.jpg";
+	mc:rating			  7;
+	mc:poster			  "poster/age_of_ultron.jpg";
 	mc:streaming		"Google Play";
- 	mc:imdb				"https://www.imdb.com/title/tt2395427/".
+ 	mc:imdb			  	"https://www.imdb.com/title/tt2395427/".
 
- id:M002    
-	mc:title			"Central Intelligence";
-	mc:director			"Rawson Marshall Thurber";
-	mc:genre			"Action, Comedy";
-	mc:releasedate		2016;
+id:M002    
+	mc:title			  "Central Intelligence";
+	mc:director		  "Rawson Marshall Thurber";
+	mc:genre			  "Action, Comedy";
+	mc:releasedate	2016;
 	mc:language			"English";
-	mc:rating			6;
-	mc:poster			"poster/central_intelligence.jpg";
+	mc:rating			  6;
+	mc:poster			  "poster/central_intelligence.jpg";
 	mc:streaming		"Google Play";
- 	mc:imdb				"https://www.imdb.com/title/tt1489889/".          
+ 	mc:imdb				  "https://www.imdb.com/title/tt1489889/".          
   
 
 id:M003
-	mc:title			"All the Bright Places";
-  	mc:director			"Brett Haley";
-  	mc:genre			"Drama, Romance";
-  	mc:releasedate		2020;
-  	mc:language			"English";
-  	mc:rating			6;
-  	mc:poster			"poster/atbp.jpg";
-  	mc:streaming		"Netflix";
-  	mc:imdb				"https://www.imdb.com/title/tt3907584/". 
+	mc:title		  	"All the Bright Places";
+  mc:director			"Brett Haley";
+  mc:genre			  "Drama, Romance";
+  mc:releasedate	2020;
+  mc:language			"English";
+  mc:rating			  6;
+  mc:poster			  "poster/atbp.jpg";
+  mc:streaming		"Netflix";
+  mc:imdb				  "https://www.imdb.com/title/tt3907584/". 
 	
 id:M004
-	mc:title			"Satan's Slave";
-  	mc:director			"Joko Anwar";
-  	mc:genre			"Horror, Drama";
-  	mc:releasedate		2017;
-  	mc:language			"Indonesian";
-  	mc:rating			6;
-  	mc:poster			"poster/satan_slave.jpg";
-  	mc:streaming		"Netflix";
-  	mc:imdb				"https://www.imdb.com/title/tt7076834/". 
-	
+  mc:title	  		"Satan's Slave";
+  mc:director			"Joko Anwar";
+  mc:genre		  	"Horror, Drama";
+  mc:releasedate	2017;
+  mc:language			"Indonesian";
+  mc:rating		  	6;
+  mc:poster			  "poster/satan_slave.jpg";
+  mc:streaming		"Netflix";
+  mc:imdb			  	"https://www.imdb.com/title/tt7076834/". 
+
 id:M005
 	mc:title    		  "Avengers: Endgame";
   mc:director       "Anthony Russo, Joe Russo";
@@ -90,7 +90,7 @@ id:M008
   mc:imdb           "https://www.imdb.com/title/tt4799066/".
 
 id:M009
-  mc:title    		"One Day We'll Talk About Today";
+  mc:title    	  	"One Day We'll Talk About Today";
   mc:director       "Angga Dwimas";
   mc:genre          "Drama";
   mc:releasedate    2020;
@@ -112,69 +112,66 @@ id:M010
   mc:imdb           "https://www.imdb.com/title/tt1634106/". 
 
 id:M011
-  mc:title    		"1917";
+  mc:title      		"1917";
   mc:director       "Sam Mendes";
   mc:genre          "Drama, War";
   mc:releasedate    2019;
   mc:language       "English";
   mc:rating         8;
   mc:poster         "poster/1917.jpg";
-  mc:streaming      "";
   mc:imdb           "https://www.imdb.com/title/tt8579674/". 
 
 id:M012
-  mc:title    		"Midsommar";
+  mc:title      		"Midsommar";
   mc:director       "Ari Aster";
   mc:genre          "Drama, Horror, Mystery";
   mc:releasedate    2019;
   mc:language       "English";
   mc:rating         7;
   mc:poster         "poster/midsommar.jpg";
-  mc:streaming      "";
   mc:imdb           "https://www.imdb.com/title/tt8772262/". 
 
 id:M013
-  mc:title    		"A Star is Born";
+  mc:title    	  	"A Star is Born";
   mc:director       "Bradly Cooper";
   mc:genre          "Drama, Music, Romance";
   mc:releasedate    2018;
   mc:language       "English";
   mc:rating         7;
   mc:poster         "poster/a_star_is_born";
-  mc:streaming      "";
   mc:imdb           "https://www.imdb.com/title/tt1517451/". 
 
 id:M014
-  mc:title    		"Get Out";
+  mc:title    	  	"Get Out";
   mc:director       "Jordan Peele";
   mc:genre          "Horror, Mystery, Thriller";
   mc:releasedate    2017;
   mc:language       "English";
   mc:rating         7;
   mc:poster         "poster/get_out";
-  mc:streaming      "";
+  mc:streaming      "Google Play";
   mc:imdb           "https://www.imdb.com/title/tt5052448/". 
 
 id:M015
-  mc:title    		"Dunkirk";
+  mc:title    		  "Dunkirk";
   mc:director       "Christopher Nolan";
   mc:genre          "Action, Drama, History";
   mc:releasedate    2018;
   mc:language       "English";
   mc:rating         7;
   mc:poster         "poster/dunkirk";
-  mc:streaming      "";
+  mc:streaming      "Netflix, Google Play";
   mc:imdb           "https://www.imdb.com/title/tt5013056/". 
 
 id:M016
   mc:title    		  "Three Billboards Outside Ebbing, Missouri";
   mc:director       "Martin McDonagh";
-  mc:genre          "Coomedy, Crime, Drama";
+  mc:genre          "Comedy, Crime, Drama";
   mc:releasedate    2017;
   mc:language       "English";
   mc:rating         8;
   mc:poster         "poster/three_billboards";
-  mc:streaming      "";
+  mc:streaming      "Google Play";
   mc:imdb           "https://www.imdb.com/title/tt5027774/". 
 
 id:M017
