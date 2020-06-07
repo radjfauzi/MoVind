@@ -40,7 +40,11 @@ function App() {
                       mc:poster			  ?poster;
                       mc:imdb				  ?imdb;
         OPTIONAL{?m   mc:streaming    ?streaming.}
-        FILTER contains(lcase(str()),)
+        FILTER contains(lcase(str(?title)), lcase(str("${value.keyword ? value.keyword : ''}")))
+        FILTER contains(lcase(str(?genre)), lcase(str("${(value.genre === "-All-") ? '' : value.genre}")))
+        FILTER contains(?year, "${(value.year === "-All-") ? '' : value.year}")
+        FILTER contains(lcase(str(?language)), lcase(str("${(value.language === "-All-") ? '' : value.language}")))
+        FILTER contains(?rating, "${(value.rating === "-All-") ? '' : value.rating}")
       }`
     };
 
@@ -138,7 +142,7 @@ function App() {
             categories
           </p>
         </div>
-        <form action>
+        <form action="#">
           <div className="row justify-content-center">
             <div className="col-sm-12 col-md-8">
               <div className="input-group">
