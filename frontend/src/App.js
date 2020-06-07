@@ -142,11 +142,13 @@ function App() {
         <div className="row justify-content-center">
           <h3>Find Your Movies Here !!!</h3>
         </div>
-        <div className="row justify-content-center">
-          <p className="mb-4 text-light">
-            Looking for a movie? You can find movies with keywords and specified
-            categories
-          </p>
+        <div className="row">
+          <div className="container text-center">
+            <p className="mb-4 text-light ">
+              Looking for a movie? You can find movies with keywords and specified
+              categories
+            </p>
+          </div>
         </div>
         <form>
           <div className="row justify-content-center">
@@ -175,7 +177,7 @@ function App() {
             </div>
           </div>
           <div className="form-row mt-3">
-            <div className="col-6 offset col-md-6 col-lg-2 offset-lg-2">
+            <div className="col-6 col-md-6 col-lg-2 offset-lg-2">
               <label htmlFor="genre">Genre :</label>
               <select value={value.genre} onChange={genreHandler} name="genre" id="genre" className="custom-select">
                 <option value="">-All-</option>
@@ -247,7 +249,8 @@ function App() {
           <div className="row">
             {/* Content Start */}
             {value.movies.map((item) => (              
-              <div key={item.id} className="col-lg-3">
+              <div key={item.id}
+                className="col-5 offset-1 col-sm-4 offset-sm-0 col-md-3 col-lg-3 offset-lg-0 justify-content-center">
                 <div className="card bg-dark border border-light mb-3 shadow-lg">
                   <img
                     className="card-img-top border-bottom border-light rounded-bottom poster-size"
@@ -255,54 +258,53 @@ function App() {
                     alt="poster_img"
                   />
                   <div className="card-body">
-                    <h5 className="card-title text-center">
+                    <h5 className="card-title text-center title-height">
                       {item.title}
                     </h5>
-                    <div className="text-center">
                       <Star rates={item.rating}/>
-                      <span className="text-muted">({item.rating})</span>
-                    </div>
                   </div>
-                  <div
-                    className="container pb-2"
-                    style={{ fontSize: "15px !important" }}
-                  >
+                  <div className="container pb-2 card-font-size">
                     <table>
                       <tbody>
-                        <tr>
+                        {/* Show Director */}
+                        <tr className="dir-height">
                           <th scope="row" className="align-text-top">
                             Director
                           </th>
                           <td className="align-text-top">&nbsp;:&nbsp;</td>
-                          <td>{item.director}</td>
+                          <td className="align-text-top">{item.director}</td>
                         </tr>
-                        <tr>
+                        {/* Show Genre */}
+                        <tr className="gnr-height">
                           <th scope="row" className="align-text-top">
                             Genre
                           </th>
                           <td className="align-text-top">&nbsp;:&nbsp;</td>
-                          <td>{item.genre}</td>
+                          <td className="align-text-top">{item.genre}</td>
                         </tr>
+                        {/* Show Year */}
                         <tr>
                           <th scope="row">Year</th>
                           <td>&nbsp;:&nbsp;</td>
                           <td>{item.year}</td>
                         </tr>
+                        {/* Show Language */}
                         <tr>
                           <th scope="row">Language</th>
                           <td>&nbsp;:&nbsp;</td>
                           <td>{item.language}</td>
                         </tr>
+                        {/* Show Streaming */}
                         <tr>
-                          <th scope="row" className="align-text-top">
+                          <th scope="row" className="align-text-top stream-height">
                             Streaming
                           </th>
                           <td className="align-text-top">&nbsp;:&nbsp;</td>
-                          <td>{item.streaming}</td>
+                          <td className="align-text-top">{item.streaming}</td>
                         </tr>
                       </tbody>
                     </table>
-                    <a href={item.imdb} target="_blank">
+                    <a href={item.imdb} target="_blank" className="imdb">
                       <img src="icon/imdb.png" alt="imdb" className="mx-auto d-block w-25" />
                     </a>
                   </div>

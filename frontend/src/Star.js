@@ -26,8 +26,9 @@ function Star(props) {
   ))
 
   return (
-    <div>
+    <div className="text-center star-mb">
       {renderStar}
+      <span className="text-muted">({props.rates})</span>
     </div>
   )
 }
