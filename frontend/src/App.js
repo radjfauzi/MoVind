@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, Component } from 'react';
 import axios from 'axios';
 import qs from 'qs';
 import './style/bootstrap.css';
 import './style/home.css';
-// import './materialize/materialize.js';
+import Star from './Star';
 
 function App() {
 
@@ -148,7 +148,7 @@ function App() {
             categories
           </p>
         </div>
-        <form action="#">
+        <form>
           <div className="row justify-content-center">
             <div className="col-sm-12 col-md-8">
               <div className="input-group">
@@ -167,7 +167,7 @@ function App() {
                 <input
                   className="btn btn-success ml-3 px-4"
                   style={{ fontWeight: "bold", fontSize: 17 }}
-                  type="submit"
+                  type="button"
                   value="Search"
                   onClick={getData}
                 />
@@ -250,7 +250,7 @@ function App() {
               <div key={item.id} className="col-lg-3">
                 <div className="card bg-dark border border-light mb-3 shadow-lg">
                   <img
-                    className="card-img-top border-bottom border-light rounded-bottom"
+                    className="card-img-top border-bottom border-light rounded-bottom poster-size"
                     src={item.poster}
                     alt="poster_img"
                   />
@@ -259,11 +259,7 @@ function App() {
                       {item.title}
                     </h5>
                     <div className="text-center">
-                      <img
-                        src="icon/icon-star.svg"
-                        alt="star"
-                        className="star-icon-size align-middle"
-                      />
+                      <Star rates={item.rating}/>
                       <span className="text-muted">({item.rating})</span>
                     </div>
                   </div>
