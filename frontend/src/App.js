@@ -15,6 +15,21 @@ function App() {
     language: '',
     rating: ''
   });
+  
+    const formatData = (movies, index) => {
+      return{
+        "id" : index,
+        "title" : movies.title.value,
+        "director" : movies.director.value,
+        "genre" : movies.genre.value, 
+        "year" : movies.year.value, 
+        "language" : movies.language.value,
+        "rating" : movies.rating.value,
+        "poster"  : movies.poster.value,
+        "imdb"  : movies.imdb.value,
+        "streaming" : movies.streaming ? movies.streaming.value : "-"
+      }
+    };
 
   const getData = async () => {
     const BASE_URL ="http://localhost:3030/movind/query";
@@ -28,7 +43,7 @@ function App() {
       query:
       `PREFIX mc: <https://movie.com/list/moviecatalog#>
       
-      SELECT ?title ?director ?genre ?releasedate ?language ?rating ?poster ?streaming ?imdb
+      SELECT ?title ?director ?genre ?year ?language ?rating ?poster ?streaming ?imdb
       WHERE
       {
         ?m            mc:title			  ?title;
@@ -44,7 +59,7 @@ function App() {
         FILTER contains(lcase(str(?genre)), lcase(str("${(value.genre === "-All-") ? '' : value.genre}")))
         FILTER contains(?year, "${(value.year === "-All-") ? '' : value.year}")
         FILTER contains(lcase(str(?language)), lcase(str("${(value.language === "-All-") ? '' : value.language}")))
-        FILTER contains(?rating, "${(value.rating === "-All-") ? '' : value.rating}")
+        FILTER (?rating > ${(value.rating === "-All-") ? 0 : value.rating-1})
       }`
     };
 
@@ -56,68 +71,57 @@ function App() {
       });
       console.log(data);
 
-      const data_formatted = data.result.bindings.map((movies, index) => formatData(movies, index));
+      const data_formatted = data.results.bindings.map((movies, index) => formatData(movies, index));
       console.log(data_formatted);
       
       setValue({
         ...value,
         movies : data_formatted
       });
-
     } catch (error) {
       console.log(error);
     }
 
   };
 
-  const formatData = (movies, index) => {
-    return {
-      "id" : index,
-      "title" : movies.title.value,
-      "director" : movies.director.value,
-      "genre" : movies.genre.value, 
-      "year" : movies.year.value, 
-      "language" : movies.language.value,
-      "rating" : movies.rating.value,
-      "poster"  : movies.poster.value,
-      "streaming"  : movies.streaming.value,
-      "imdb"  : movies.imdb.value
-    }
-  };
-
   const keywordHandler = (event) =>{
     setValue({
       ...value,
       'keyword': event.target.value
-    })
+    });
+    console.log(value.keyword);
   };
 
   const genreHandler = (event) =>{
     setValue({
       ...value,
       'genre': event.target.value
-    })
+    });
+    console.log(value.genre);
   };
 
   const yearHandler = (event) =>{
     setValue({
       ...value,
       'year': event.target.value
-    })
+    });
+    console.log(value.year);
   };
 
   const languageHandler = (event) =>{
     setValue({
       ...value,
       'language': event.target.value
-    })
+    });
+    console.log(value.language);
   };
 
   const ratingHandler = (event) =>{
     setValue({
       ...value,
       'rating': event.target.value
-    })
+    });
+    console.log(value.rating);
   };
 
   return (
@@ -193,17 +197,17 @@ function App() {
               <label htmlFor="year">Year</label>
               <select setValue={value.year} onChange={yearHandler} name="year" id="year" className="custom-select">
                 <option value="all">-All-</option>
-                <option value={2020}>2020</option>
-                <option value={2019}>2019</option>
-                <option value={2018}>2018</option>
-                <option value={2017}>2017</option>
-                <option value={2016}>2016</option>
-                <option value={2015}>2015</option>
-                <option value={2014}>2014</option>
-                <option value={2013}>2013</option>
-                <option value={2012}>2012</option>
-                <option value={2011}>2011</option>
-                <option value={2010}>2010</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
               </select>
             </div>
             <div className="col-6 col-md-6 col-lg-2">
