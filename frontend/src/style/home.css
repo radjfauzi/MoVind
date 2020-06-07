@@ -32,3 +32,8 @@ body{
   width: 10px;
   height: 10px;
 }
+
+.poster-size{
+  width: auto;
+  height: 400px;
+}
