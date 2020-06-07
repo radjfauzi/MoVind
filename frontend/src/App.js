@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
+import qs from 'qs';
 import './style/bootstrap.css';
 import './style/home.css';
 // import './materialize/materialize.js';
@@ -7,7 +8,12 @@ import './style/home.css';
 function App() {
 
   const [value, setValue] = useState({
-
+    movies: [],
+    keyword: '',
+    genre: '',
+    year: '',
+    language: '',
+    rating: ''
   });
 
   const getData = async () => {
@@ -20,10 +26,95 @@ function App() {
 
     const queryData = {
       query:
-      'PREFIX'
+      `PREFIX mc: <https://movie.com/list/moviecatalog#>
+      
+      SELECT ?title ?director ?genre ?releasedate ?language ?rating ?poster ?streaming ?imdb
+      WHERE
+      {
+        ?m            mc:title			  ?title;
+                      mc:director		  ?director;
+                      mc:genre			  ?genre;
+                      mc:year       	?year;
+                      mc:language			?language;
+                      mc:rating			  ?rating;
+                      mc:poster			  ?poster;
+                      mc:imdb				  ?imdb;
+        OPTIONAL{?m   mc:streaming    ?streaming.}
+        FILTER contains(lcase(str()),)
+      }`
     };
 
-  }; 
+    try {
+      const { data } = await axios(BASE_URL, {
+        method: 'POST',
+        headers,
+        data: qs.stringify(queryData)
+      });
+      console.log(data);
+
+      const data_formatted = data.result.bindings.map((movies, index) => formatData(movies, index));
+      console.log(data_formatted);
+      
+      setValue({
+        ...value,
+        movies : data_formatted
+      });
+
+    } catch (error) {
+      console.log(error);
+    }
+
+  };
+
+  const formatData = (movies, index) => {
+    return {
+      "id" : index,
+      "title" : movies.title.value,
+      "director" : movies.director.value,
+      "genre" : movies.genre.value, 
+      "year" : movies.year.value, 
+      "language" : movies.language.value,
+      "rating" : movies.rating.value,
+      "poster"  : movies.poster.value,
+      "streaming"  : movies.streaming.value,
+      "imdb"  : movies.imdb.value
+    }
+  };
+
+  const keywordHandler = (event) =>{
+    setValue({
+      ...value,
+      'keyword': event.target.value
+    })
+  };
+
+  const genreHandler = (event) =>{
+    setValue({
+      ...value,
+      'genre': event.target.value
+    })
+  };
+
+  const yearHandler = (event) =>{
+    setValue({
+      ...value,
+      'year': event.target.value
+    })
+  };
+
+  const languageHandler = (event) =>{
+    setValue({
+      ...value,
+      'language': event.target.value
+    })
+  };
+
+  const ratingHandler = (event) =>{
+    setValue({
+      ...value,
+      'rating': event.target.value
+    })
+  };
 
   return (
     <div className="bg-dark txt-lightc">
@@ -55,6 +146,7 @@ function App() {
                   <img className="search-icon-size" src="icon/icon-search.svg" alt="search" />
                 </div>
                 <input
+                  onChange={keywordHandler}
                   name="search"
                   id="search"
                   className="form-control form-control-lg border-0 rounded-pill"
@@ -64,6 +156,7 @@ function App() {
                 <button
                   className="btn btn-success ml-3 px-4"
                   style={{ fontWeight: "bold", fontSize: 17 }}
+                  onClick={getData}
                 >
                   Search
                 </button>
@@ -73,7 +166,7 @@ function App() {
           <div className="form-row mt-3">
             <div className="col-6 offset col-md-6 col-lg-2 offset-lg-2">
               <label htmlFor="genre">Genre :</label>
-              <select name="genre" id="genre" className="custom-select">
+              <select setValue={value.genre} onChange={genreHandler} name="genre" id="genre" className="custom-select">
                 <option value="all" selected>
                   -All-
                 </option>
@@ -83,11 +176,18 @@ function App() {
                 <option value="romance">Romance</option>
                 <option value="action">Action</option>
                 <option value="comedy">Comedy</option>
+                <option value="war">war</option>
+                <option value="mystery">Mystery</option>
+                <option value="music">Music</option>
+                <option value="crime">Crime</option>
+                <option value="thriller">Thriller</option>
+                <option value="history">History</option>
+                <option value="adventure">Adventure</option>                
               </select>
             </div>
             <div className="col-6 col-md-6 col-lg-2">
               <label htmlFor="year">Year</label>
-              <select name="year" id="year" className="custom-select">
+              <select setValue={value.year} onChange={yearHandler} name="year" id="year" className="custom-select">
                 <option value="all">-All-</option>
                 <option value={2020}>2020</option>
                 <option value={2019}>2019</option>
@@ -95,11 +195,16 @@ function App() {
                 <option value={2017}>2017</option>
                 <option value={2016}>2016</option>
                 <option value={2015}>2015</option>
+                <option value={2014}>2014</option>
+                <option value={2013}>2013</option>
+                <option value={2012}>2012</option>
+                <option value={2011}>2011</option>
+                <option value={2010}>2010</option>
               </select>
             </div>
             <div className="col-6 col-md-6 col-lg-2">
               <label htmlFor="language">Language</label>
-              <select name="language" id="language" className="custom-select">
+              <select setValue={value.language} onChange={languageHandler} name="language" id="language" className="custom-select">
                 <option value="all">-All-</option>
                 <option value="english">English</option>
                 <option value="indonesian">Indonesian</option>
@@ -107,7 +212,7 @@ function App() {
             </div>
             <div className="col-6 col-md-6 col-lg-2">
               <label htmlFor="rating">Min. Rating</label>
-              <select name="rating" id="rating" className="custom-select">
+              <select setValue={value.rating} onChange={ratingHandler} name="rating" id="rating" className="custom-select">
                 <option value="all" selected>
                   -All-
                 </option>
@@ -132,118 +237,74 @@ function App() {
               Movies Found = <strong>1</strong>
             </h4>
           </div>
-          {/* Content Start */}
           <div className="row">
-            <div className="col-lg-3">
-              <div className="card bg-dark border border-light mb-3 shadow-lg">
-                <img
-                  className="card-img-top border-bottom border-light rounded-bottom"
-                  src="poster/central_intelligence.jpg"
-                  alt="midnight_sun_poster"
-                />
-                <div className="card-body">
-                  <h5 className="card-title text-center">
-                    Avengers : Age Of Ultron
-                  </h5>
-                  <div className="text-center">
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
-                    />
-                    <span className="text-muted">(10)</span>
+            {/* Content Start */}
+            {value.movies.map((item) => (              
+              <div className="col-lg-3">
+                <div key={item.id} className="card bg-dark border border-light mb-3 shadow-lg">
+                  <img
+                    className="card-img-top border-bottom border-light rounded-bottom"
+                    src={item.poster}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title text-center">
+                      {item.title}
+                    </h5>
+                    <div className="text-center">
+                      <img
+                        src="icon/icon-star.svg"
+                        alt="star"
+                        className="star-icon-size align-middle"
+                      />
+                      <span className="text-muted">({item.rating})</span>
+                    </div>
+                  </div>
+                  <div
+                    className="container pb-2"
+                    style={{ fontSize: "15px !important" }}
+                  >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th scope="row" className="align-text-top">
+                            Director
+                          </th>
+                          <td className="align-text-top">&nbsp;:&nbsp;</td>
+                          <td>{item.director}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" className="align-text-top">
+                            Genre
+                          </th>
+                          <td className="align-text-top">&nbsp;:&nbsp;</td>
+                          <td>{item.genre}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Year</th>
+                          <td>&nbsp;:&nbsp;</td>
+                          <td>{item.year}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Language</th>
+                          <td>&nbsp;:&nbsp;</td>
+                          <td>{item.language}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" className="align-text-top">
+                            Streaming
+                          </th>
+                          <td className="align-text-top">&nbsp;:&nbsp;</td>
+                          <td>{item.streaming}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <a href={item.imdb} target="_blank">
+                      <img src="icon/imdb.png" alt="imdb" className="mx-auto d-block w-25" />
+                    </a>
                   </div>
                 </div>
-                <div
-                  className="container pb-2"
-                  style={{ fontSize: "15px !important" }}
-                >
-                  <table>
-                    <tbody>
-                      <tr>
-                        <th scope="row" className="align-text-top">
-                          Director
-                        </th>
-                        <td className="align-text-top">&nbsp;:&nbsp;</td>
-                        <td>Fahmiau</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" className="align-text-top">
-                          Genre
-                        </th>
-                        <td className="align-text-top">&nbsp;:&nbsp;</td>
-                        <td>Drama, Romance</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Year</th>
-                        <td>&nbsp;:&nbsp;</td>
-                        <td>2018</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Language</th>
-                        <td>&nbsp;:&nbsp;</td>
-                        <td>Indonesian</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" className="align-text-top">
-                          Streaming
-                        </th>
-                        <td className="align-text-top">&nbsp;:&nbsp;</td>
-                        <td>Netflix, Google Play</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <a href="https://www.imdb.com/" target="_blank">
-                    <img src="icon/imdb.png" alt="imdb" className="mx-auto d-block w-25" />
-                  </a>
-                </div>
               </div>
-            </div>
+            ))}
             {/* content end */}
           </div>
         </div>
