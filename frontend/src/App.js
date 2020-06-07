@@ -242,7 +242,7 @@ function App() {
         <div className="container mt-5">
           <div className="row justify-content-center mb-4">
             <h4 className="mt-4">
-              Movies Found = <strong>1</strong>
+              Movies Found = <strong>{value.movies.length}</strong>
             </h4>
           </div>
           <div className="row">
@@ -260,9 +260,9 @@ function App() {
                     </h5>
                     <div className="text-center">
                       <img
-                        src="icon/icon-star.svg"
-                        alt="star"
-                        className="star-icon-size align-middle"
+                      src="icon/icon-star.svg"
+                      alt="star"
+                      className="star-icon-size align-middle"
                       />
                       <span className="text-muted">({item.rating})</span>
                     </div>
