@@ -16,20 +16,20 @@ function App() {
     rating: ''
   });
   
-    const formatData = (movies, index) => {
-      return{
-        "id" : index,
-        "title" : movies.title.value,
-        "director" : movies.director.value,
-        "genre" : movies.genre.value, 
-        "year" : movies.year.value, 
-        "language" : movies.language.value,
-        "rating" : movies.rating.value,
-        "poster"  : movies.poster.value,
-        "imdb"  : movies.imdb.value,
-        "streaming" : movies.streaming ? movies.streaming.value : "-"
-      }
-    };
+  const formatData = (movies, index) => {
+    return{
+      "id" : index,
+      "title" : movies.title.value,
+      "director" : movies.director.value,
+      "genre" : movies.genre.value, 
+      "year" : movies.year.value, 
+      "language" : movies.language.value,
+      "rating" : movies.rating.value,
+      "poster"  : movies.poster.value,
+      "imdb"  : movies.imdb.value,
+      "streaming" : movies.streaming ? movies.streaming.value : "-"
+    }
+  }
 
   const getData = async () => {
     const BASE_URL ="http://localhost:3030/movind/query";
@@ -39,6 +39,7 @@ function App() {
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     };
 
+    console.log(value);
     const queryData = {
       query:
       `PREFIX mc: <https://movie.com/list/moviecatalog#>
@@ -56,10 +57,10 @@ function App() {
                       mc:imdb				  ?imdb;
         OPTIONAL{?m   mc:streaming    ?streaming.}
         FILTER contains(lcase(str(?title)), lcase(str("${value.keyword ? value.keyword : ''}")))
-        FILTER contains(lcase(str(?genre)), lcase(str("${(value.genre === "-All-") ? '' : value.genre}")))
-        FILTER contains(?year, "${(value.year === "-All-") ? '' : value.year}")
-        FILTER contains(lcase(str(?language)), lcase(str("${(value.language === "-All-") ? '' : value.language}")))
-        FILTER (?rating > ${(value.rating === "-All-") ? 0 : value.rating-1})
+        FILTER contains(lcase(str(?genre)), lcase(str("${value.genre ? value.genre : ''}")))
+        FILTER contains(?year, "${value.year ? value.year : ''}")
+        FILTER contains(lcase(str(?language)), lcase(str("${value.language ? value.language : ''}")))
+        FILTER (?rating > ${value.rating ? value.rating-1 : 0})
       }`
     };
 
@@ -82,53 +83,54 @@ function App() {
       console.log(error);
     }
 
-  };
+  }
 
-  const keywordHandler = (event) =>{
+  const keywordHandler = event =>{
     setValue({
       ...value,
-      'keyword': event.target.value
+      'keyword': event.target.value,
     });
     console.log(value.keyword);
-  };
+  }
 
-  const genreHandler = (event) =>{
+  const genreHandler = event =>{
     setValue({
       ...value,
-      'genre': event.target.value
+      'genre': event.target.value,
     });
     console.log(value.genre);
-  };
+  }
 
-  const yearHandler = (event) =>{
+  const yearHandler = event =>{
     setValue({
       ...value,
-      'year': event.target.value
+      'year': event.target.value,
     });
     console.log(value.year);
-  };
+  }
 
-  const languageHandler = (event) =>{
+  const languageHandler = event =>{
     setValue({
       ...value,
-      'language': event.target.value
+      'language': event.target.value,
     });
     console.log(value.language);
-  };
+  }
 
-  const ratingHandler = (event) =>{
+  const ratingHandler = event =>{
     setValue({
       ...value,
-      'rating': event.target.value
+      'rating': event.target.value,
     });
     console.log(value.rating);
-  };
+  }
 
   return (
     <div className="bg-dark txt-lightc">
       <nav className="navbar navbar-dark bg-dark shadow mb-5">
         <div className="container">
           <a
+            href="/"
             className="navbar-brand mx-auto"
             style={{ fontSize: "30px !important" }}
           >
@@ -154,6 +156,7 @@ function App() {
                   <img className="search-icon-size" src="icon/icon-search.svg" alt="search" />
                 </div>
                 <input
+                  value={value.keyword}
                   onChange={keywordHandler}
                   name="search"
                   id="search"
@@ -161,23 +164,21 @@ function App() {
                   type="text"
                   placeholder="Search Movie Title"
                 />
-                <button
+                <input
                   className="btn btn-success ml-3 px-4"
                   style={{ fontWeight: "bold", fontSize: 17 }}
+                  type="submit"
+                  value="Search"
                   onClick={getData}
-                >
-                  Search
-                </button>
+                />
               </div>
             </div>
           </div>
           <div className="form-row mt-3">
             <div className="col-6 offset col-md-6 col-lg-2 offset-lg-2">
               <label htmlFor="genre">Genre :</label>
-              <select setValue={value.genre} onChange={genreHandler} name="genre" id="genre" className="custom-select">
-                <option value="all" selected>
-                  -All-
-                </option>
+              <select value={value.genre} onChange={genreHandler} name="genre" id="genre" className="custom-select">
+                <option value="">-All-</option>
                 <option value="sci-fi">Sci-fi</option>
                 <option value="horror">Horror</option>
                 <option value="drama">Drama</option>
@@ -195,8 +196,8 @@ function App() {
             </div>
             <div className="col-6 col-md-6 col-lg-2">
               <label htmlFor="year">Year</label>
-              <select setValue={value.year} onChange={yearHandler} name="year" id="year" className="custom-select">
-                <option value="all">-All-</option>
+              <select value={value.year} onChange={yearHandler} name="year" id="year" className="custom-select">
+                <option value="">-All-</option>
                 <option value="2020">2020</option>
                 <option value="2019">2019</option>
                 <option value="2018">2018</option>
@@ -212,18 +213,16 @@ function App() {
             </div>
             <div className="col-6 col-md-6 col-lg-2">
               <label htmlFor="language">Language</label>
-              <select setValue={value.language} onChange={languageHandler} name="language" id="language" className="custom-select">
-                <option value="all">-All-</option>
+              <select value={value.language} onChange={languageHandler} name="language" id="language" className="custom-select">
+                <option value="">-All-</option>
                 <option value="english">English</option>
                 <option value="indonesian">Indonesian</option>
               </select>
             </div>
             <div className="col-6 col-md-6 col-lg-2">
               <label htmlFor="rating">Min. Rating</label>
-              <select setValue={value.rating} onChange={ratingHandler} name="rating" id="rating" className="custom-select">
-                <option value="all" selected>
-                  -All-
-                </option>
+              <select value={value.rating} onChange={ratingHandler} name="rating" id="rating" className="custom-select">
+                <option value="">-All-</option>
                 <option value={9}>9</option>
                 <option value={8}>8</option>
                 <option value={7}>7</option>
@@ -248,11 +247,12 @@ function App() {
           <div className="row">
             {/* Content Start */}
             {value.movies.map((item) => (              
-              <div className="col-lg-3">
-                <div key={item.id} className="card bg-dark border border-light mb-3 shadow-lg">
+              <div key={item.id} className="col-lg-3">
+                <div className="card bg-dark border border-light mb-3 shadow-lg">
                   <img
                     className="card-img-top border-bottom border-light rounded-bottom"
                     src={item.poster}
+                    alt="poster_img"
                   />
                   <div className="card-body">
                     <h5 className="card-title text-center">
@@ -260,9 +260,9 @@ function App() {
                     </h5>
                     <div className="text-center">
                       <img
-                      src="icon/icon-star.svg"
-                      alt="star"
-                      className="star-icon-size align-middle"
+                        src="icon/icon-star.svg"
+                        alt="star"
+                        className="star-icon-size align-middle"
                       />
                       <span className="text-muted">({item.rating})</span>
                     </div>
