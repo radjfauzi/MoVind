@@ -1,0 +1,16 @@
+PREFIX mc: <https://movie.com/list/moviecatalog#>
+      
+SELECT ?title ?director ?genre ?year ?language ?rating ?poster ?streaming ?imdb
+WHERE
+{
+  ?m   mc:title			?title;
+       mc:director		?director;
+       mc:genre			?genre;
+       mc:year       	?year;
+       mc:language		?language;
+       mc:rating		?rating;
+       mc:poster		?poster;
+       mc:imdb			?imdb;
+   OPTIONAL{?m  mc:streaming    	?streaming.}
+   #FILTER regex(?title, "(?title)")
+}
