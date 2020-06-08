@@ -449,3 +449,35 @@ id:M025 mc:Sequel id:M001 .
 id:M005 mc:Sequel id:M018 .
 id:M005 mc:Sequel id:M001 .  
 id:M005 mc:Sequel id:M018 . 
+
+#Franchise
+id:M042 mc:Franchise id:M043 .
+od:M042 mc:Franchise id:M044 .
+od:M043 mc:Franchise id:M044 .
+
+#JossContent
+id:M018 mc:JossContent id:M001 .
+
+#Indonesian Movie
+id:M045 mc:Indonesian id:M031 .
+id:M045 mc:Indonesian id:M041 .
+id:M045 mc:Indonesian id:M034 .
+id:M045 mc:Indonesian id:M033 .
+id:M045 mc:Indonesian id:M032 .
+id:M045 mc:Indonesian id:M009 .
+id:M045 mc:Indonesian id:M010 .
+id:M031 mc:Indonesian id:M041 .
+id:M031 mc:Indonesian id:M034 .
+id:M031 mc:Indonesian id:M033 .
+id:M031 mc:Indonesian id:M032 .
+id:M031 mc:Indonesian id:M009 .
+id:M031 mc:Indonesian id:M010 .
+id:M041 mc:Indonesian id:M034 .
+id:M041 mc:Indonesian id:M033 .
+id:M041 mc:Indonesian id:M032 .
+id:M041 mc:Indonesian id:M009 .
+id:M041 mc:Indonesian id:M010 .
+id:M033 mc:Indonesian id:M032 .
+id:M033 mc:Indonesian id:M009 .
+id:M033 mc:Indonesian id:M010 .
+id:M009 mc:Indonesian id:M010 .
