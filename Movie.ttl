@@ -1,34 +1,451 @@
-@prefix mc: <https://movie.com/list/moviecatalog#> .
-@prefix sc: <https://movie.com/list/seriescatalog#> .
-@prefix id: <http://movie.com/list/data#> .
+@prefix mc:    <https://movie.com/list/moviecatalog#> .
+@prefix id:    <https://movie.com/list/data#> .
 
+id:M042  mc:director  "Peter Jackson" ;
+        mc:genre      "Adventure, Fantasy" ;
+        mc:imdb       "https://www.imdb.com/title/tt0903624/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/hobbit_unexjourney.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "The Hobbit: An Unexpected Journey" ;
+        mc:year       "2012" .
 
-id:M001     
-	mc:title    		"Avengers : AgeOfUltron" ;
-    mc:category      	"Action" ;
-    mc:releasedate     	"2017" ;
-	mc:director      	"Joss Whedon" ;
-	mc:director      	"Anthony Russo" ;
-    mc:director       	"Joe Russo" . 
+id:M020  mc:director  "Mel Gibson" ;
+        mc:genre     "War, Drama" ;
+        mc:imdb      "https://www.imdb.com/title/tt2119532/" ;
+        mc:language  "English" ;
+        mc:poster    "poster/hacksaw_ridge.jpg" ;
+        mc:rating    8 ;
+        mc:title     "Hacksaw Ridge" ;
+        mc:year      "2016" .
 
-id:M002     
-	mc:title    		"Spiderman : Homecoming" ;
-    mc:category     	"Action" ;
-    mc:releasedate      "2017" ;
-	mc:director       	"Jonn Wats" . 
-	
-	
-id:M003
-	mc:title    		"2012" ;
-    mc:category    	  	"thriller" ;
-    mc:releasedate      "2012" ;
-    mc:director       	"Roland Emmerich" . 
-	
-	
-id:S001
-	sc:title    		"GameOfThrone" ;
-    sc:category    	  	"Action , romance" ;
-    sc:releasedate      "2019" ;
-	sc:director			"D.B Weiss";
-    sc:director       	"David Benioff" .
+id:M008  mc:director  "Scott Speer" ;
+        mc:genre     "Drama, Romance" ;
+        mc:imdb      "https://www.imdb.com/title/tt4799066/" ;
+        mc:language  "English" ;
+        mc:poster    "poster/midnight_sun.jpg" ;
+        mc:rating    6 ;
+        mc:title     "Midnight Sun" ;
+        mc:year      "2018" .
 
+id:M038  mc:director  "Ernest Prakasa" ;
+        mc:genre      "Comedy, Drama, Family" ;
+        mc:imdb       "https://www.imdb.com/title/tt6366854/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/cek_toko_sebelah.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "Cek Toko Sebelah" ;
+        mc:year       "2016" .
+
+id:M034  mc:director  "Ernest Prakasa" ;
+        mc:genre     "Comedy" ;
+        mc:imdb      "https://www.imdb.com/title/tt1385919/" ;
+        mc:language  "Indonesian" ;
+        mc:poster    "poster/ngenest.jpg" ;
+        mc:rating    7 ;
+        mc:title     "Ngenest" ;
+        mc:year      "2015" .
+
+id:M032  mc:director  "Yandy Laurens" ;
+        mc:genre     "Drama" ;
+        mc:imdb      "https://www.imdb.com/title/tt7885874/" ;
+        mc:language  "Indonesian" ;
+        mc:poster    "poster/keluarga_cemara.jpg" ;
+        mc:rating    7 ;
+        mc:title     "Keluarga Cemara" ;
+        mc:year      "2018" .
+
+id:M002  mc:director  "Rawson Marshall Thurber" ;
+        mc:genre      "Action, Comedy" ;
+        mc:imdb       "https://www.imdb.com/title/tt1489889/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/central_intelligence.jpg" ;
+        mc:rating     6 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Central Intelligence" ;
+        mc:year       "2016" .
+
+id:M015  mc:director  "Christopher Nolan" ;
+        mc:genre      "Action, Drama, History" ;
+        mc:imdb       "https://www.imdb.com/title/tt5013056/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/dunkirk.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix, Google Play" ;
+        mc:title      "Dunkirk" ;
+        mc:year       "2018" .
+
+id:M011  mc:director  "Sam Mendes" ;
+        mc:genre     "Drama, War" ;
+        mc:imdb      "https://www.imdb.com/title/tt8579674/" ;
+        mc:language  "English" ;
+        mc:poster    "poster/1917.jpg" ;
+        mc:rating    8 ;
+        mc:title     "1917" ;
+        mc:year      "2019" .
+
+id:M033  mc:director  "Raditya Dika" ;
+        mc:genre     "Comedy, Romance" ;
+        mc:imdb      "https://www.imdb.com/title/tt5658714/" ;
+        mc:language  "Indonesian" ;
+        mc:poster    "poster/mmj.jpg" ;
+        mc:rating    6 ;
+        mc:title     "Marmut Merah Jambu" ;
+        mc:year      "2014" .
+
+id:M007  mc:director  "Timo Tjahjanto" ;
+        mc:genre      "Action, Drama" ;
+        mc:imdb       "https://www.imdb.com/title/tt6116856/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/tncfu.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "The Night Comes for Us" ;
+        mc:year       "2018" .
+
+id:M028  mc:director  "Damien Chazelle" ;
+        mc:genre     "Drama, Music" ;
+        mc:imdb      "https://www.imdb.com/title/tt2582802/" ;
+        mc:language  "English" ;
+        mc:poster    "poster/whiplash.jpg" ;
+        mc:rating    8 ;
+        mc:title     "Whiplash" ;
+        mc:year      "2014" .
+
+id:M024  mc:director  "Matt Reeves" ;
+        mc:genre      "Action, Adventure, Drama" ;
+        mc:imdb       "https://www.imdb.com/title/tt2103281/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/planet_apes.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Dawn of the Planet of the Apes" ;
+        mc:year       "2014" .
+
+id:M041  mc:director  "Ernest Prakasa" ;
+        mc:genre     "Comedy, Romance" ;
+        mc:imdb      "https://www.imdb.com/title/tt8233368/" ;
+        mc:language  "Indonesian" ;
+        mc:poster    "poster/milly_mamet.jpg" ;
+        mc:rating    7 ;
+        mc:title     "Milly & Mamet: Ini Bukan Cinta & Rangga" ;
+        mc:year      "2018" .
+
+id:M027  mc:director  "David Ayer" ;
+        mc:genre     "Action, Drama, War" ;
+        mc:imdb      "https://www.imdb.com/title/tt2713180/" ;
+        mc:language  "English" ;
+        mc:poster    "poster/fury.jpg" ;
+        mc:rating    7 ;
+        mc:title     "Fury" ;
+        mc:year      "2014" .
+
+id:M023  mc:director  "Bong Joon Ho" ;
+        mc:genre      "Crime, Drama, Thriller" ;
+        mc:imdb       "https://www.imdb.com/title/tt7286456/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/joker.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Joker" ;
+        mc:year       "2019" .
+
+id:M037  mc:director  "John Krasinski" ;
+        mc:genre      "Drama, Horror, Sci-Fi" ;
+        mc:imdb       "https://www.imdb.com/title/tt6644200/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/quiet_place.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "A Quiet Place" ;
+        mc:year       "2018" .
+
+id:M014  mc:director  "Jordan Peele" ;
+        mc:genre      "Horror, Mystery, Thriller" ;
+        mc:imdb       "https://www.imdb.com/title/tt5052448/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/get_out.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Get Out" ;
+        mc:year       "2017" .
+
+id:M019  mc:director  "Anthony Russo, Joe Russo" ;
+        mc:genre      "Action, Adventure, Sci-Fi" ;
+        mc:imdb       "https://www.imdb.com/title/tt4154756/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/infinity_war.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Avengers: Infinity War" ;
+        mc:year       "2018" .
+
+id:M021  mc:director  "Benny Safdie, Josh Safdie" ;
+        mc:genre      "Crime, Drama, Thriller" ;
+        mc:imdb       "https://www.imdb.com/title/tt5727208/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/uncut_gems.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "Uncut Gems" ;
+        mc:year       "2019" .
+
+id:M031  mc:director  "Gareth Evans" ;
+        mc:genre      "Action, Crime, Thriller" ;
+        mc:imdb       "https://www.imdb.com/title/tt2265171/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/the_raid2.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "The Raid 2: Berandal" ;
+        mc:year       "2014" .
+
+id:M006  mc:director  "Mouly Surya" ;
+        mc:genre     "Drama" ;
+        mc:imdb      "https://www.imdb.com/title/tt5923026/" ;
+        mc:language  "Indonesian" ;
+        mc:poster    "poster/marlina.jpg" ;
+        mc:rating    7 ;
+        mc:title     "Marlina the Murderer in Four Acts" ;
+        mc:year      "2017" .
+
+id:M040  mc:director  "Riri Riza" ;
+        mc:genre      "Drama, Romance" ;
+        mc:imdb       "https://www.imdb.com/title/tt5687416/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/aadc2.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "Ada Apa dengan Cinta? 2" ;
+        mc:year       "2016" .
+
+id:M036  mc:director  "Herdanius Larobu" ;
+        mc:genre      "Comedy, Romance" ;
+        mc:imdb       "https://www.imdb.com/title/tt6330072/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/manusia_setsalmon.jpg" ;
+        mc:rating     6 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "Manusia Setengah Salmon" ;
+        mc:year       "2013" .
+
+id:M013  mc:director  "Bradly Cooper" ;
+        mc:genre     "Drama, Music, Romance" ;
+        mc:imdb      "https://www.imdb.com/title/tt1517451/" ;
+        mc:language  "English" ;
+        mc:poster    "poster/a_star_is_born.jpg" ;
+        mc:rating    7 ;
+        mc:title     "A Star is Born" ;
+        mc:year      "2018" .
+
+id:M043  mc:director  "Peter Jackson" ;
+        mc:genre      "Adventure, Fantasy" ;
+        mc:imdb       "https://www.imdb.com/title/tt0903624/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/hobbit_desolation.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "The Hobbit: The Desolation of Smaug" ;
+        mc:year       "2013" .
+
+id:M029  mc:director  "Gareth Evans" ;
+        mc:genre      "Action, Thriller" ;
+        mc:imdb       "https://www.imdb.com/title/tt1899353/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/the_raid.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "The Raid: Redemption" ;
+        mc:year       "2011" .
+
+id:M005  mc:director  "Anthony Russo, Joe Russo" ;
+        mc:genre      "Action, Drama" ;
+        mc:imdb       "https://www.imdb.com/title/tt4154796/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/endgame.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Avengers: Endgame" ;
+        mc:year       "2019" .
+
+id:M018  mc:director  "Joss Whedon" ;
+        mc:genre      "Action, Adventure, Sci-Fi" ;
+        mc:imdb       "https://www.imdb.com/title/tt0848228/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/avengers.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "The Avengers" ;
+        mc:year       "2012" .
+
+id:M004  mc:director  "Joko Anwar" ;
+        mc:genre      "Horror, Drama" ;
+        mc:imdb       "https://www.imdb.com/title/tt7076834/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/satan_slave.jpg" ;
+        mc:rating     6 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "Satan's Slave" ;
+        mc:year       "2017" .
+
+id:M039  mc:director  "Upi Avianto" ;
+        mc:genre      "Comedy" ;
+        mc:imdb       "https://www.imdb.com/title/tt5514296/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/stupid_boss.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "My Stupid Boss" ;
+        mc:year       "2016" .
+
+id:M025  mc:director  "Christopher Nolan" ;
+        mc:genre      "Adventure, Drama, Sci-Fi" ;
+        mc:imdb       "https://www.imdb.com/title/tt0816692/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/interstellar.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Interstellar" ;
+        mc:year       "2014" .
+
+id:M001  mc:director  "Joss Whedon" ;
+        mc:genre      "Action, Sci-fi" ;
+        mc:imdb       "https://www.imdb.com/title/tt2395427/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/age_of_ultron.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Avengers: Age Of Ultron" ;
+        mc:year       "2015" .
+
+id:M022  mc:director  "Christopher Nolan" ;
+        mc:genre      "Action, Adventure, Sci-Fi" ;
+        mc:imdb       "https://www.imdb.com/title/tt1375666/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/inception.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Google Play, Netflix" ;
+        mc:title      "Inception" ;
+        mc:year       "2019" .
+
+id:M026  mc:director  "Sylvester Stallone" ;
+        mc:genre     "Action, Adventure, Thriller" ;
+        mc:imdb      "https://www.imdb.com/title/tt1320253/" ;
+        mc:language  "English" ;
+        mc:poster    "poster/expendables.jpg" ;
+        mc:rating    6 ;
+        mc:title     "The Expendables" ;
+        mc:year      "2010" .
+
+id:M035  mc:director  "Fajar Nugros" ;
+        mc:genre      "Comedy, Drama, Romance" ;
+        mc:imdb       "https://www.imdb.com/title/tt3032040/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/cinta_brontosaurus.jpg" ;
+        mc:rating     6 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "Cinta Brontosaurus" ;
+        mc:year       "2013" .
+
+id:M030  mc:director  "Rupert Wyatt" ;
+        mc:genre      "Action, Drama, Sci-Fi" ;
+        mc:imdb       "https://www.imdb.com/title/tt1318514/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/rise_apes.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Rise of the Planet of the Apes" ;
+        mc:year       "2011" .
+
+id:M003  mc:director  "Brett Haley" ;
+        mc:genre      "Drama, Romance" ;
+        mc:imdb       "https://www.imdb.com/title/tt3907584/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/atbp.jpg" ;
+        mc:rating     6 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "All the Bright Places" ;
+        mc:year       "2020" .
+
+id:M044  mc:director  "Peter Jackson" ;
+        mc:genre      "Adventure, Fantasy" ;
+        mc:imdb       "https://www.imdb.com/title/tt2310332/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/hobbit_fivearmies.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "The Hobbit: The Battle of the Five Armies" ;
+        mc:year       "2014" .
+
+id:M009  mc:director  "Angga Dwimas" ;
+        mc:genre      "Drama" ;
+        mc:imdb       "https://www.imdb.com/title/tt10773114/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/nkcthi.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "One Day We'll Talk About Today" ;
+        mc:year       "2020" .
+
+id:M016  mc:director  "Martin McDonagh" ;
+        mc:genre      "Comedy, Crime, Drama" ;
+        mc:imdb       "https://www.imdb.com/title/tt5027774/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/three_billboards.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Three Billboards Outside Ebbing, Missouri" ;
+        mc:year       "2017" .
+
+id:M012  mc:director  "Ari Aster" ;
+        mc:genre     "Drama, Horror, Mystery" ;
+        mc:imdb      "https://www.imdb.com/title/tt8772262/" ;
+        mc:language  "English" ;
+        mc:poster    "poster/midsommar.jpg" ;
+        mc:rating    7 ;
+        mc:title     "Midsommar" ;
+        mc:year      "2019" .
+
+id:M010  mc:director  "Dave Wilson" ;
+        mc:genre      "Action, Sci-fi" ;
+        mc:imdb       "https://www.imdb.com/title/tt1634106/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/bloodshot.jpg" ;
+        mc:rating     5 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "Bloodshot" ;
+        mc:year       "2020" .
+
+id:M045  mc:director  "Ernest Prakasa" ;
+        mc:genre      "Comedy, Drama" ;
+        mc:imdb       "https://www.imdb.com/title/tt10932100/" ;
+        mc:language   "Indonesian" ;
+        mc:poster     "poster/imperfect.jpg" ;
+        mc:rating     7 ;
+        mc:streaming  "Netflix" ;
+        mc:title      "Imperfect" ;
+        mc:year       "2019" .
+
+id:M017  mc:director  "Christopher Nolan" ;
+        mc:genre      "Action, Adventure" ;
+        mc:imdb       "https://www.imdb.com/title/tt1345836/" ;
+        mc:language   "English" ;
+        mc:poster     "poster/dark_knight_rises.jpg" ;
+        mc:rating     8 ;
+        mc:streaming  "Google Play" ;
+        mc:title      "The Dark Knight Rises" ;
+        mc:year       "2012" .
+
+#Sequel
+id:M019 mc:Sequel id:M025 . 
+id:M019 mc:Sequel id:M005 .
+id:M019 mc:Sequel id:M018 . 
+id:M019 mc:Sequel id:M001 .   
+id:M025 mc:Sequel id:M005 . 
+id:M025 mc:Sequel id:M018 . 
+id:M025 mc:Sequel id:M001 .
+id:M005 mc:Sequel id:M018 .
+id:M005 mc:Sequel id:M001 .  
+id:M005 mc:Sequel id:M018 . 
