@@ -175,3 +175,30 @@ body{
 @media only screen and (min-width: 1200px) {
 
 }
+
+.pagination > li > a
+{
+    background-color: white;
+    color: #353a40;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+  color: #27a844;
+  border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+  color: #353a40 !important;
+  border: solid 1px #353a40 !important;
+}
+
+.pagination > .active > a:hover
+{
+  color: #353a40 !important;
+  border: solid 1px #353a40 !important;
+}
