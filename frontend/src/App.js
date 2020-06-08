@@ -32,7 +32,10 @@ function App() {
   }
 
   const getData = async () => {
+    // untuk local
     const BASE_URL ="http://localhost:3030/movind/query";
+    // untuk deploy
+    // const BASE_URL ="https://qrary-fuseki-service.herokuapp.com/movind/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
