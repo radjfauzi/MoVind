@@ -4,6 +4,8 @@ import qs from 'qs';
 import './style/bootstrap.css';
 import './style/home.css';
 import Star from './Star';
+import Movies from './Movies';
+import Pagination from './Pagination';
 
 function App() {
 
@@ -15,6 +17,9 @@ function App() {
     language: '',
     rating: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [moviesPerPage] = useState(12);
   
   const formatData = (movies, index) => {
     return{
@@ -32,10 +37,11 @@ function App() {
   }
 
   const getData = async () => {
+    setLoading(true);
     // untuk local
-    const BASE_URL ="http://localhost:3030/movind/query";
+    // const BASE_URL ="http://localhost:3030/movind/query";
     // untuk deploy
-    // const BASE_URL ="https://qrary-fuseki-service.herokuapp.com/movind/query";
+    const BASE_URL ="https://qrary-fuseki-service.herokuapp.com/movind/query";
 
     const headers = {
       'Accept': 'application/sparql-results+json,*/*;q=0.9',
@@ -82,6 +88,7 @@ function App() {
         ...value,
         movies : data_formatted
       });
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -127,6 +134,12 @@ function App() {
     });
     console.log(value.rating);
   }
+
+  const indexOfLastMovie = currentPage * moviesPerPage;
+  const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
+  const currentMovies = value.movies.slice(indexOfFirstMovie, indexOfLastMovie);
+
+  const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
     <div className="bg-dark txt-lightc">
@@ -249,73 +262,11 @@ function App() {
               Movies Found = <strong>{value.movies.length}</strong>
             </h4>
           </div>
-          <div className="row">
+          <Pagination moviesPerPage={moviesPerPage} totalMovies={value.movies.length} paginate={paginate} />
             {/* Content Start */}
-            {value.movies.map((item) => (              
-              <div key={item.id}
-                className="col-5 offset-1 col-sm-4 offset-sm-0 col-md-3 col-lg-3 offset-lg-0 justify-content-center">
-                <div className="card bg-dark border border-light mb-3 shadow-lg">
-                  <img
-                    className="card-img-top border-bottom border-light rounded-bottom poster-size"
-                    src={item.poster}
-                    alt="poster_img"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title text-center title-height">
-                      {item.title}
-                    </h5>
-                      <Star rates={item.rating}/>
-                  </div>
-                  <div className="container pb-2 card-font-size">
-                    <table>
-                      <tbody>
-                        {/* Show Director */}
-                        <tr className="dir-height">
-                          <th scope="row" className="align-text-top">
-                            Director
-                          </th>
-                          <td className="align-text-top">&nbsp;:&nbsp;</td>
-                          <td className="align-text-top">{item.director}</td>
-                        </tr>
-                        {/* Show Genre */}
-                        <tr className="gnr-height">
-                          <th scope="row" className="align-text-top">
-                            Genre
-                          </th>
-                          <td className="align-text-top">&nbsp;:&nbsp;</td>
-                          <td className="align-text-top">{item.genre}</td>
-                        </tr>
-                        {/* Show Year */}
-                        <tr>
-                          <th scope="row">Year</th>
-                          <td>&nbsp;:&nbsp;</td>
-                          <td>{item.year}</td>
-                        </tr>
-                        {/* Show Language */}
-                        <tr>
-                          <th scope="row">Language</th>
-                          <td>&nbsp;:&nbsp;</td>
-                          <td>{item.language}</td>
-                        </tr>
-                        {/* Show Streaming */}
-                        <tr>
-                          <th scope="row" className="align-text-top stream-height">
-                            Streaming
-                          </th>
-                          <td className="align-text-top">&nbsp;:&nbsp;</td>
-                          <td className="align-text-top">{item.streaming}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <a href={item.imdb} target="_blank" className="imdb">
-                      <img src="icon/imdb.png" alt="imdb" className="mx-auto d-block w-25" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <Movies movies={currentMovies} loading={loading} />
             {/* content end */}
-          </div>
+          <Pagination moviesPerPage={moviesPerPage} totalMovies={value.movies.length} paginate={paginate} />
         </div>
       </div>
     </div>
